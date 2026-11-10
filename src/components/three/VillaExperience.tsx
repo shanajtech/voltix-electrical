@@ -2,6 +2,7 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { RoundedBox, Stars, useGLTF } from "@react-three/drei";
 import { Component, Suspense, useEffect, useMemo, useRef, useState, type MutableRefObject, type ReactNode } from "react";
+import { publicUrl } from "@/lib/public-url";
 import * as THREE from "three";
 
 export type JourneyState = {progress:number};
@@ -38,7 +39,7 @@ function Sofa(){return <group position={[2.8,.3,-1.6]}>
  {[-1.2,1.1].map(x=><Box key={x} position={[x,.95,-.05]} size={[.48,.5,.18]} color="#6b6358" rotation={[0,0,x*.12]}/>)}
  </group>}
 function AssetSofa(){
- const {scene}=useGLTF("/models/sofa.glb");
+ const {scene}=useGLTF(publicUrl("/models/sofa.glb"));
  const model=useMemo(()=>{
   const object=scene.clone(true);
   const bounds=new THREE.Box3().setFromObject(object);

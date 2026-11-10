@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { publicUrl } from "@/lib/public-url";
 import type { Language } from "@/app/page";
 import { services } from "@/data/services";
 import QuoteRequest from "./QuoteRequest";
@@ -29,6 +30,6 @@ export default function Sections({language}:{language:Language}){
  ].map(([q,bq,a,ba])=><details key={q}><summary>{bn?bq:q}<span>+</span></summary><p>{bn?ba:a}</p></details>)}</div></section>
  <section id="about" className="section-wrap about-section"><p className="section-kicker">{bn?"স্থানীয় ইলেকট্রিক্যাল সেবা":"LOCAL ELECTRICAL SERVICES"}</p><h2>M/S KHAJA <span>ENTERPRISE</span></h2><div className="about-copy"><p>{bn?"মেরাজনগর, শ্যামপুর, ঢাকা। নতুন বিল্ডিংয়ের ইলেকট্রিক্যাল কাজ, ওয়্যারিং, ফিটিং, আর্থিং, মিটার সংক্রান্ত সহায়তা ও মেরামতের প্রয়োজন নিয়ে যোগাযোগ করুন।":"Merajnagar, Shyampur, Dhaka. Discuss new-building electrical work, wiring, fittings, earthing, meter-related assistance and repairs."}</p><p>{bn?"আমাদের সঙ্গে সরাসরি কথা বলে আপনার কাজের পরিধি, মালামাল, দলের প্রয়োজন, সময় ও দামদর ঠিক করুন। সাইটের ভিডিওগুলো কাজের ধরন বোঝানোর স্টক ও ধারণামূলক দৃশ্য; আমাদের কর্মী বা সম্পন্ন প্রকল্পের দাবি নয়।":"Talk directly about your scope, material needs, team, schedule and price. Site visuals use stock footage and illustrative scenes to show service types; they do not claim to show our employees or completed projects."}</p></div></section>
  <section id="contact" className="contact-section"><div className="section-wrap"><div><p className="section-kicker">{bn?"কাজের কথা হোক":"LET’S TALK ABOUT THE WORK"}</p><h2>{bn?"বিল্ডিং কন্ট্রাক্ট?":"A building contract?"}<br/><span>{bn?"নাকি মেরামত?":"Or a repair?"}</span></h2><p>{bn?"মেরাজনগর · শ্যামপুর · ঢাকা":"Merajnagar · Shyampur · Dhaka"}</p></div><div className="contact-actions"><a className="contact-phone" href="tel:+8801717716586">01717716586 ↗</a><a className="btn-primary" href="#quote">{bn?"কাজের বিবরণ দিয়ে কথা বলুন":"DISCUSS YOUR REQUIREMENTS"} ↗</a><a className="contact-whatsapp" href="https://wa.me/8801717716586" target="_blank" rel="noopener noreferrer">{bn?"সরাসরি WhatsApp খুলুন":"OPEN WHATSAPP DIRECTLY"} ↗</a></div></div></section>
- <footer className="site-footer"><a href="#home">M/S KHAJA ENTERPRISE</a><span>{bn?"ইলেকট্রিক্যাল কন্ট্রাক্ট · মেরামত · ঢাকা":"Electrical contracts · Repairs · Dhaka"}</span><a href="/visual-credits.html" target="_blank" rel="noopener noreferrer">{bn?"দৃশ্যের কৃতিত্ব":"Visual credits"}</a><a href="#home">{bn?"উপরে ফিরুন":"BACK TO TOP"} ↑</a></footer>
+ <footer className="site-footer"><a href="#home">M/S KHAJA ENTERPRISE</a><span>{bn?"ইলেকট্রিক্যাল কন্ট্রাক্ট · মেরামত · ঢাকা":"Electrical contracts · Repairs · Dhaka"}</span><a href={publicUrl("/visual-credits.html")} target="_blank" rel="noopener noreferrer">{bn?"দৃশ্যের কৃতিত্ব":"Visual credits"}</a><a href="#home">{bn?"উপরে ফিরুন":"BACK TO TOP"} ↑</a></footer>
  </>;
 }
