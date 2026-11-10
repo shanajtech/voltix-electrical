@@ -24,7 +24,7 @@ export default function Navbar({
   const links = [
     { en: "Home", bn: "হোম", href: "#home" },
     { en: "Services", bn: "সেবাসমূহ", href: "#services" },
-    { en: "Our Work", bn: "আমাদের কাজ", href: "#projects" },
+    { en: "Work stages", bn: "কাজের ধাপ", href: "#projects" },
     { en: "About", bn: "পরিচিতি", href: "#about" },
     { en: "Contact", bn: "যোগাযোগ", href: "#contact" },
   ];
@@ -84,11 +84,11 @@ export default function Navbar({
 
           <a
             className="quote-button"
-            href="https://wa.me/8801717716586"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#quote"
+
+
           >
-            {isBangla ? "যোগাযোগ করুন" : "GET A QUOTE"}
+            {isBangla ? "কাজ নিয়ে কথা বলুন" : "DISCUSS YOUR WORK"}
             <span>↗</span>
           </a>
         </div>
@@ -107,5 +107,3 @@ export default function Navbar({
     </header>
   );
 }
-
-

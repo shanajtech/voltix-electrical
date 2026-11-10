@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "VOLTIX Electrical | Professional Electrical Services",
+  title: "M/S KHAJA ENTERPRISE | Electrical Services in Dhaka",
   description:
-    "House wiring, fan and motor repair, electrical maintenance, and meter connection assistance.",
+    "Building electrical contracts, roof conduits, wiring, switchboards, earthing, meter assistance and fan repairs in Merajnagar, Shyampur, Dhaka. Discuss scope, labour, materials and price directly.",
 };
 
 export default function RootLayout({
@@ -19,5 +19,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-
